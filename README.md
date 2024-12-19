@@ -1,28 +1,28 @@
-# [APAI22-LAB09] End-to-end CNN deployment 
+# [APAI23-LAB09] End-to-end CNN deployment 
 
 
 # 1. Setup
 
-## Access to the remote server, and setup
-1. Open this web page: https://compute.eees.dei.unibo.it:8443/guacamole/    (works only from ALMA WIFI NETWORK!).
-2. Login with your credentials
-
 ## Download the repo
+
+Open the usual VM used for the other labs, then:
 ```
 $ cd <work_dir>
-$ git clone https://github.com/EEESlab/APAI23-LAB09-end-to-end-CNN-deployment.git --recurse-submodules --shallow-submodules
+$ git clone https://github.com/EEESlab/APAI24-Old-LAB09-end-to-end-CNN-deployment.git --recurse-submodules --shallow-submodules
 ```
 
 **Note**: make sure to clone with `--recurse-submodules` !
 
-## Load modules
-Load appropriate modules to be able to compile and run the code 
+## Setup PULP-SDK and related 
 
-Note: Always do this when opening a new terminal session
-
+Source:
 ```
-$ module load pulp-sdk
-$ module load dory-conda
+$ source setup_pulp_sdk.sh
+```
+
+Install dependencies
+```
+$ pip install onnx ortools 
 ```
 
 
@@ -31,7 +31,7 @@ $ module load dory-conda
 
 #### 1. `cd` to dory directory
    
-`$ cd APAI23-LAB09-end-to-end-CNN-deployment/dory`
+`$ cd APAI24-Old-LAB09-end-to-end-CNN-deployment/dory`
 
 #### 2. Generate the network
 
